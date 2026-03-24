@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Housing &amp; Settling In — Safeer Mauritius</title>
+  <meta name="description" content="Find your perfect home in Mauritius. From neighbourhood advisory to property search, lease negotiation and home setup — we handle every step." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean:   { DEFAULT: '#0077B6', light: '#00B4D8', dark: '#005F8A' },
+            sand:    { DEFAULT: '#C9A96E', light: '#F4E4C1', lighter: '#FDF6EC' },
+            jungle:  { DEFAULT: '#2D6A4F', light: '#40916C', lighter: '#D8F3DC' },
+            coral:   { DEFAULT: '#E76F51' },
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-lg">S</span>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-xl text-ocean-dark">Safeer</span>
+            <span class="font-heading font-bold text-xl text-sand"> Mauritius</span>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"          class="nav-link">Home</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="index.html#packages" class="nav-link">Packages</a>
+          <a href="index.html#about"    class="nav-link">About</a>
+          <a href="index.html#faq"      class="nav-link">FAQ</a>
+          <a href="index.html#contact"  class="btn-primary text-sm px-5 py-2.5">Get in Touch</a>
+        </nav>
+        <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="index.html"          class="mobile-nav-link">Home</a>
+      <a href="index.html#services" class="mobile-nav-link">Services</a>
+      <a href="index.html#packages" class="mobile-nav-link">Packages</a>
+      <a href="index.html#about"    class="mobile-nav-link">About</a>
+      <a href="index.html#faq"      class="mobile-nav-link">FAQ</a>
+      <a href="index.html#contact"  class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===================== BREADCRUMB ===================== -->
+  <div class="pt-20 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-2 text-sm text-gray-500">
+      <a href="index.html" class="hover:text-ocean transition-colors">Home</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <a href="index.html#services" class="hover:text-ocean transition-colors">Services</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-ocean font-medium">Housing &amp; Settling In</span>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=85&fit=crop"
+        alt="Modern luxury home"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a3a2a]/90 via-[#2d5a3a]/60 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="900">
+        <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-white/30">
+          Housing &amp; Settling In
+        </span>
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Find Your Perfect Home<br/>
+          <span class="text-sand-light">in Mauritius</span>
+        </h1>
+        <p class="text-lg text-white/85 leading-relaxed mb-8 max-w-xl">
+          We know every neighbourhood, every street. Let our local property experts match you with the right home — and set it up so you arrive to comfort.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html#contact" class="btn-primary text-base px-8 py-4 inline-flex items-center gap-2">
+            Get a Free Consultation
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="index.html#services" class="btn-outline-white text-base px-8 py-4">
+            ← Back to all services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AREA PROFILES ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Where to Live</span>
+        <h2 class="section-title mt-3">Top Expat Neighbourhoods</h2>
+        <p class="section-subtitle">Each area of Mauritius has its own personality. We match your lifestyle to the right location.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Grand Baie -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="0">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80&fit=crop" alt="Grand Baie beach" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">Grand Baie</h3>
+              <span class="bg-ocean/10 text-ocean text-xs font-semibold px-3 py-1 rounded-full">North Coast</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Mauritius's most cosmopolitan town. Great for families, professionals, and socialites. Closest to the best restaurants, shopping, water sports, and the lively expat community.</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">€800–3,000/mo</div>
+                <div class="text-gray-500 text-xs mt-0.5">Rental range</div>
+              </div>
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">Family-friendly</div>
+                <div class="text-gray-500 text-xs mt-0.5">Best for</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tamarin / Black River -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80&fit=crop" alt="Tamarin Bay surf" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">Tamarin / Black River</h3>
+              <span class="bg-jungle/10 text-jungle text-xs font-semibold px-3 py-1 rounded-full">West Coast</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">A laidback surf lifestyle meets stunning Black River Gorges scenery. Popular with creatives, surfers, and families who prefer a quieter, more authentic Mauritius experience.</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">€600–2,500/mo</div>
+                <div class="text-gray-500 text-xs mt-0.5">Rental range</div>
+              </div>
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">Surf lifestyle</div>
+                <div class="text-gray-500 text-xs mt-0.5">Best for</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flic en Flac -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80&fit=crop" alt="Flic en Flac beach" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">Flic en Flac</h3>
+              <span class="bg-coral/10 text-coral text-xs font-semibold px-3 py-1 rounded-full">West Coast</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Mauritius's most affordable beach town without sacrificing quality. Long white beach, growing restaurant scene, and a strong sense of community among expats.</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">€500–2,000/mo</div>
+                <div class="text-gray-500 text-xs mt-0.5">Rental range</div>
+              </div>
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">Best value</div>
+                <div class="text-gray-500 text-xs mt-0.5">Best for</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bel Ombre -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+          <div class="h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop" alt="Bel Ombre luxury estate" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">Bel Ombre</h3>
+              <span class="bg-sand/20 text-sand text-xs font-semibold px-3 py-1 rounded-full">South Coast</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Mauritius at its most luxurious. Exclusive PDS estates, pristine southern lagoon, championship golf, and five-star resorts. For those who want the very best the island has to offer.</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">€1,500–8,000/mo</div>
+                <div class="text-gray-500 text-xs mt-0.5">Rental range</div>
+              </div>
+              <div class="bg-sand-lighter rounded-xl p-3">
+                <div class="font-semibold text-gray-900">Luxury estates</div>
+                <div class="text-gray-500 text-xs mt-0.5">Best for</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUYING RULES ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Property Purchase</span>
+        <h2 class="section-title mt-3">Buying Property as a Foreigner</h2>
+        <p class="section-subtitle">Mauritius has specific schemes that allow foreigners to purchase property. We connect you with licensed advisors to navigate them.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 rounded-xl bg-ocean text-white flex items-center justify-center font-heading font-bold text-lg mb-5">PDS</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-3">Property Development Scheme</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">The main scheme for buying standalone villas, townhouses, or penthouses in integrated resort developments.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Minimum purchase: USD 375,000</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Automatic Permanent Residence Permit</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Freehold title deeds</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>No restrictions on rental income</li>
+          </ul>
+        </div>
+
+        <div class="bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-jungle text-white flex items-center justify-center font-heading font-bold text-lg mb-5">IRS</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-3">Integrated Resort Scheme</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">The original scheme for high-end resort-integrated properties. Largely superseded by PDS but certain legacy developments still operate under IRS.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Luxury resort-integrated properties</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Minimum purchase: USD 375,000</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Permanent residency included</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Full ownership rights</li>
+          </ul>
+        </div>
+
+        <div class="bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-sand text-white flex items-center justify-center font-heading font-bold text-lg mb-5">RES</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-3">Real Estate Scheme</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Smaller-scale residential developments designed for foreigners. More affordable entry point but without automatic residency qualification.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Typically smaller plots / apartments</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>No minimum purchase price</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>No automatic residency</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Good value for money</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR HOUSING PROCESS ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title mt-3">Our Housing Process</h2>
+        <p class="section-subtitle">From your first brief to unpacking your boxes — we're with you at every step.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 rounded-full bg-ocean text-white flex items-center justify-center font-heading font-bold text-2xl mx-auto mb-4">1</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Brief &amp; Search</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We take your brief — location, budget, bedrooms, lifestyle — and search our exclusive network of landlords and developers.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 rounded-full bg-ocean-light text-white flex items-center justify-center font-heading font-bold text-2xl mx-auto mb-4">2</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Curated Viewings</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We shortlist the best options and organise viewings — in person or via video tour. We attend with you and advise honestly on each property.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 rounded-full bg-sand text-white flex items-center justify-center font-heading font-bold text-2xl mx-auto mb-4">3</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Negotiate &amp; Sign</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We negotiate on your behalf to get the best price and terms. Our legal partners review all lease or purchase agreements before you sign.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 rounded-full bg-jungle text-white flex items-center justify-center font-heading font-bold text-2xl mx-auto mb-4">4</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Move In Ready</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We coordinate utilities, internet, and furnishing so your home is ready before you land. You arrive and start living — not scrambling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT'S INCLUDED ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Our Service</span>
+        <h2 class="section-title mt-3">What's Included</h2>
+        <p class="section-subtitle">A comprehensive housing service so nothing is left to chance.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-start gap-4 bg-sand-lighter rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-ocean/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 text-sm mb-1">Neighbourhood Advisory</h4>
+            <p class="text-gray-600 text-sm">Personalised guidance on the best areas based on your lifestyle, family, and budget.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-sand-lighter rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-jungle/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-jungle" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 text-sm mb-1">Property Search &amp; Shortlisting</h4>
+            <p class="text-gray-600 text-sm">Access to both listed and unlisted properties via our local landlord network.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-sand-lighter rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-sand/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 text-sm mb-1">Accompanied Viewings</h4>
+            <p class="text-gray-600 text-sm">We visit every property with you (or virtually) and give you an honest, independent assessment.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-sand-lighter rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-coral/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 text-sm mb-1">Lease &amp; Purchase Negotiation</h4>
+            <p class="text-gray-600 text-sm">We negotiate the best price and terms so you never overpay in an unfamiliar market.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-sand-lighter rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-ocean/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 text-sm mb-1">Contract Review</h4>
+            <p class="text-gray-600 text-sm">Our legal partners check every clause before you sign anything — protecting your interests.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-sand-lighter rounded-xl p-5">
+          <div class="w-10 h-10 rounded-lg bg-jungle/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-jungle" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 text-sm mb-1">Home Setup &amp; Furnishing</h4>
+            <p class="text-gray-600 text-sm">Utilities, internet, furniture sourcing, and housekeeping introductions — all coordinated before you arrive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="py-20 bg-ocean-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-6">Ready to Find Your Home?</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Tell us your budget, preferred area, and lifestyle — we'll do the rest. Book your free consultation today.</p>
+      <a href="index.html#contact" class="btn-primary text-base px-10 py-4 inline-flex items-center gap-2">
+        Get a Free Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+              <span class="text-white font-heading font-bold text-lg">S</span>
+            </div>
+            <span class="font-heading text-xl font-bold">Safeer Mauritius</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">Your trusted partner for relocation to Mauritius. We handle the complexity so you can enjoy the journey.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://wa.me/2305700000" class="social-icon" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html"          class="footer-link">Home</a></li>
+            <li><a href="index.html#services" class="footer-link">Services</a></li>
+            <li><a href="index.html#packages" class="footer-link">Packages</a></li>
+            <li><a href="index.html#about"    class="footer-link">About Us</a></li>
+            <li><a href="index.html#faq"      class="footer-link">FAQ</a></li>
+            <li><a href="index.html#contact"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="visa-residency.html"   class="footer-link">Visa &amp; Residency</a></li>
+            <li><a href="housing.html"          class="footer-link">Housing &amp; Settling In</a></li>
+            <li><a href="logistics.html"        class="footer-link">Logistics &amp; Moving</a></li>
+            <li><a href="legal-financial.html"  class="footer-link">Legal &amp; Financial</a></li>
+            <li><a href="family-lifestyle.html" class="footer-link">Family &amp; Lifestyle</a></li>
+            <li><a href="remote-worker.html"    class="footer-link">Remote Worker Package</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">© 2025 Safeer Mauritius. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">Based in Port Louis, Republic of Mauritius 🇲🇺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOATING BUTTON ===================== -->
+  <a href="https://wa.me/2305700000?text=Hello%2C%20I%27m%20interested%20in%20relocating%20to%20Mauritius.%20Can%20you%20help%3F" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

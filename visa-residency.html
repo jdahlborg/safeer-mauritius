@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visa & Residency — Safeer Mauritius</title>
+  <meta name="description" content="Expert guidance through Mauritius's permit system — Premium Visa, Occupation Permit, Investor Permit and more. We handle every document, application, and follow-up." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean:   { DEFAULT: '#0077B6', light: '#00B4D8', dark: '#005F8A' },
+            sand:    { DEFAULT: '#C9A96E', light: '#F4E4C1', lighter: '#FDF6EC' },
+            jungle:  { DEFAULT: '#2D6A4F', light: '#40916C', lighter: '#D8F3DC' },
+            coral:   { DEFAULT: '#E76F51' },
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-lg">S</span>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-xl text-ocean-dark">Safeer</span>
+            <span class="font-heading font-bold text-xl text-sand"> Mauritius</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"          class="nav-link">Home</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="index.html#packages" class="nav-link">Packages</a>
+          <a href="index.html#about"    class="nav-link">About</a>
+          <a href="index.html#faq"      class="nav-link">FAQ</a>
+          <a href="index.html#contact"  class="btn-primary text-sm px-5 py-2.5">Get in Touch</a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="index.html"          class="mobile-nav-link">Home</a>
+      <a href="index.html#services" class="mobile-nav-link">Services</a>
+      <a href="index.html#packages" class="mobile-nav-link">Packages</a>
+      <a href="index.html#about"    class="mobile-nav-link">About</a>
+      <a href="index.html#faq"      class="mobile-nav-link">FAQ</a>
+      <a href="index.html#contact"  class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===================== BREADCRUMB ===================== -->
+  <div class="pt-20 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-2 text-sm text-gray-500">
+      <a href="index.html" class="hover:text-ocean transition-colors">Home</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <a href="index.html#services" class="hover:text-ocean transition-colors">Services</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-ocean font-medium">Visa &amp; Residency</span>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=85&fit=crop"
+        alt="Passport and travel documents"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#005F8A]/90 via-[#0077B6]/65 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="900">
+        <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-white/30">
+          Visa &amp; Residency Services
+        </span>
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Navigate Mauritius Residency<br/>
+          <span class="text-sand-light">With Confidence</span>
+        </h1>
+        <p class="text-lg text-white/85 leading-relaxed mb-8 max-w-xl">
+          We demystify Mauritius's permit system and handle every document, submission, and follow-up — so your approval arrives as fast as possible.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html#contact" class="btn-primary text-base px-8 py-4 inline-flex items-center gap-2">
+            Get a Free Consultation
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="index.html#services" class="btn-outline-white text-base px-8 py-4">
+            ← Back to all services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PERMIT TYPES ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Your Options</span>
+        <h2 class="section-title mt-3">Permit Types Explained</h2>
+        <p class="section-subtitle">Mauritius offers several residency pathways. We assess your profile and recommend the best fit.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Premium Visa -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 rounded-xl bg-ocean/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <div class="flex items-center gap-3 mb-3">
+            <h3 class="font-heading text-xl font-semibold text-gray-900">Premium Visa</h3>
+            <span class="bg-ocean/10 text-ocean text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">Ideal for remote workers, freelancers, and retirees who wish to live in Mauritius while earning income from abroad.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ocean flex-shrink-0"></span>Valid for 1 year, renewable annually</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ocean flex-shrink-0"></span>Minimum income: USD 1,500/month</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ocean flex-shrink-0"></span>No work permit required for remote income</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-ocean flex-shrink-0"></span>Processed in 2–4 weeks</li>
+          </ul>
+        </div>
+
+        <!-- Occupation Permit -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-jungle/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-jungle" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-semibold text-gray-900 mb-3">Occupation Permit</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">For professionals employed locally or self-employed individuals operating a Mauritius-based business.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-jungle flex-shrink-0"></span>Valid for 3 years, renewable</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-jungle flex-shrink-0"></span>Minimum salary: MUR 30,000/month (professionals)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-jungle flex-shrink-0"></span>Covers professionals & self-employed</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-jungle flex-shrink-0"></span>Processed in 4–6 weeks</li>
+          </ul>
+        </div>
+
+        <!-- Retired Non-Citizen Permit -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-sand/20 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-semibold text-gray-900 mb-3">Retired Non-Citizen Permit</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">Designed for retirees aged 50 and above who wish to enjoy Mauritius's exceptional quality of life.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sand flex-shrink-0"></span>Minimum age: 50 years</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sand flex-shrink-0"></span>Transfer USD 1,500/month to Mauritius bank</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sand flex-shrink-0"></span>Valid 3 years, renewable</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sand flex-shrink-0"></span>No active employment allowed</li>
+          </ul>
+        </div>
+
+        <!-- Investor Permit -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-semibold text-gray-900 mb-3">Investor Permit</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">For entrepreneurs and investors establishing or acquiring a business in Mauritius.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-coral flex-shrink-0"></span>Minimum investment: USD 50,000</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-coral flex-shrink-0"></span>Valid 3 years, renewable</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-coral flex-shrink-0"></span>Includes spouse &amp; dependants</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-coral flex-shrink-0"></span>Path to Permanent Residency</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPLICATION PROCESS ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Step by Step</span>
+        <h2 class="section-title mt-3">The Application Process</h2>
+        <p class="section-subtitle">We guide you through every stage — from initial assessment to collecting your permit.</p>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <div class="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-ocean via-sand to-jungle"></div>
+
+        <div class="space-y-10">
+          <!-- Step 1 -->
+          <div class="flex gap-8 items-start" data-aos="fade-up" data-aos-delay="0">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-ocean text-white flex items-center justify-center font-heading font-bold text-xl shadow-md z-10">1</div>
+            <div class="bg-sand-lighter rounded-2xl p-6 flex-1">
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Free Profile Assessment</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">We review your nationality, income sources, employment situation, and goals to identify the ideal permit pathway — and flag any potential issues early.</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex gap-8 items-start" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-ocean-light text-white flex items-center justify-center font-heading font-bold text-xl shadow-md z-10">2</div>
+            <div class="bg-sand-lighter rounded-2xl p-6 flex-1">
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Document Collection &amp; Preparation</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">We provide a tailored checklist and guide you through preparing every document — certified translations, apostilles, bank statements, and more — to meet Mauritius EDB standards.</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex gap-8 items-start" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-sand text-white flex items-center justify-center font-heading font-bold text-xl shadow-md z-10">3</div>
+            <div class="bg-sand-lighter rounded-2xl p-6 flex-1">
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Application Submission</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">We submit your complete application to the Economic Development Board (EDB) or Passport and Immigration Office on your behalf — correctly and on time.</p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="flex gap-8 items-start" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-jungle-light text-white flex items-center justify-center font-heading font-bold text-xl shadow-md z-10">4</div>
+            <div class="bg-sand-lighter rounded-2xl p-6 flex-1">
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Follow-Up &amp; Communication</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">We monitor your application's progress, respond to any requests for additional information, and keep you updated throughout — no black holes, no guessing.</p>
+            </div>
+          </div>
+          <!-- Step 5 -->
+          <div class="flex gap-8 items-start" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-jungle text-white flex items-center justify-center font-heading font-bold text-xl shadow-md z-10">5</div>
+            <div class="bg-sand-lighter rounded-2xl p-6 flex-1">
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Permit Collection &amp; Onboarding</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Once approved, we accompany you through the collection process and brief you on your rights, obligations, and renewal timeline — so you're fully set up from day one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOCUMENTS CHECKLIST ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Be Prepared</span>
+        <h2 class="section-title mt-3">Documents Checklist</h2>
+        <p class="section-subtitle">Most applications require these documents. Exact requirements vary by permit type — we'll give you a tailored list.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg bg-ocean/10 flex items-center justify-center text-ocean text-sm font-bold">ID</span>
+            Identity Documents
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Valid passport (min. 18 months validity)</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Birth certificate (certified &amp; apostilled)</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Marriage certificate (if applicable)</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Police clearance certificate</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg bg-jungle/10 flex items-center justify-center text-jungle text-sm font-bold">$</span>
+            Financial Documents
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>3–6 months bank statements</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Proof of income or pension</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Employment contract or client contracts</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Tax returns (last 2 years)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg bg-sand/20 flex items-center justify-center text-sand text-sm font-bold">+</span>
+            Supporting Documents
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Proof of accommodation in Mauritius</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Medical certificate / health clearance</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>CV / professional qualifications</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Business plan (for Investor Permit)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE TABLE ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Processing Times</span>
+        <h2 class="section-title mt-3">Expected Timelines</h2>
+        <p class="section-subtitle">Timelines depend on application completeness. We maximise your chances of meeting these benchmarks.</p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-ocean text-white">
+              <th class="text-left px-6 py-4 font-semibold">Permit Type</th>
+              <th class="text-left px-6 py-4 font-semibold">Typical Processing Time</th>
+              <th class="text-left px-6 py-4 font-semibold">Validity</th>
+              <th class="text-left px-6 py-4 font-semibold">Renewable</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-sand-lighter transition-colors">
+              <td class="px-6 py-4 font-medium text-gray-900">Premium Visa</td>
+              <td class="px-6 py-4 text-gray-600">2–4 weeks</td>
+              <td class="px-6 py-4 text-gray-600">1 year</td>
+              <td class="px-6 py-4"><span class="bg-jungle/10 text-jungle text-xs font-semibold px-2.5 py-1 rounded-full">Yes, annually</span></td>
+            </tr>
+            <tr class="hover:bg-sand-lighter transition-colors">
+              <td class="px-6 py-4 font-medium text-gray-900">Occupation Permit (Professional)</td>
+              <td class="px-6 py-4 text-gray-600">4–6 weeks</td>
+              <td class="px-6 py-4 text-gray-600">3 years</td>
+              <td class="px-6 py-4"><span class="bg-jungle/10 text-jungle text-xs font-semibold px-2.5 py-1 rounded-full">Yes</span></td>
+            </tr>
+            <tr class="hover:bg-sand-lighter transition-colors">
+              <td class="px-6 py-4 font-medium text-gray-900">Occupation Permit (Self-Employed)</td>
+              <td class="px-6 py-4 text-gray-600">5–8 weeks</td>
+              <td class="px-6 py-4 text-gray-600">3 years</td>
+              <td class="px-6 py-4"><span class="bg-jungle/10 text-jungle text-xs font-semibold px-2.5 py-1 rounded-full">Yes</span></td>
+            </tr>
+            <tr class="hover:bg-sand-lighter transition-colors">
+              <td class="px-6 py-4 font-medium text-gray-900">Retired Non-Citizen Permit</td>
+              <td class="px-6 py-4 text-gray-600">3–5 weeks</td>
+              <td class="px-6 py-4 text-gray-600">3 years</td>
+              <td class="px-6 py-4"><span class="bg-jungle/10 text-jungle text-xs font-semibold px-2.5 py-1 rounded-full">Yes</span></td>
+            </tr>
+            <tr class="hover:bg-sand-lighter transition-colors">
+              <td class="px-6 py-4 font-medium text-gray-900">Investor Permit</td>
+              <td class="px-6 py-4 text-gray-600">6–10 weeks</td>
+              <td class="px-6 py-4 text-gray-600">3 years</td>
+              <td class="px-6 py-4"><span class="bg-jungle/10 text-jungle text-xs font-semibold px-2.5 py-1 rounded-full">Yes</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="py-20 bg-ocean-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-6">Ready to Start Your Application?</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Book a free 30-minute consultation. We'll assess your profile and outline the fastest, most suitable route to Mauritius residency.</p>
+      <a href="index.html#contact" class="btn-primary text-base px-10 py-4 inline-flex items-center gap-2">
+        Get a Free Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+              <span class="text-white font-heading font-bold text-lg">S</span>
+            </div>
+            <span class="font-heading text-xl font-bold">Safeer Mauritius</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+            Your trusted partner for relocation to Mauritius. We handle the complexity so you can enjoy the journey.
+          </p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/2305700000" class="social-icon" aria-label="WhatsApp">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html"          class="footer-link">Home</a></li>
+            <li><a href="index.html#services" class="footer-link">Services</a></li>
+            <li><a href="index.html#packages" class="footer-link">Packages</a></li>
+            <li><a href="index.html#about"    class="footer-link">About Us</a></li>
+            <li><a href="index.html#faq"      class="footer-link">FAQ</a></li>
+            <li><a href="index.html#contact"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="visa-residency.html"   class="footer-link">Visa &amp; Residency</a></li>
+            <li><a href="housing.html"          class="footer-link">Housing &amp; Settling In</a></li>
+            <li><a href="logistics.html"        class="footer-link">Logistics &amp; Moving</a></li>
+            <li><a href="legal-financial.html"  class="footer-link">Legal &amp; Financial</a></li>
+            <li><a href="family-lifestyle.html" class="footer-link">Family &amp; Lifestyle</a></li>
+            <li><a href="remote-worker.html"    class="footer-link">Remote Worker Package</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">© 2025 Safeer Mauritius. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">Based in Port Louis, Republic of Mauritius 🇲🇺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOATING BUTTON ===================== -->
+  <a
+    href="https://wa.me/2305700000?text=Hello%2C%20I%27m%20interested%20in%20relocating%20to%20Mauritius.%20Can%20you%20help%3F"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-fab"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

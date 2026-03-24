@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Worker Package — Safeer Mauritius</title>
+  <meta name="description" content="Work from paradise — legally. The complete solution for digital nomads and remote workers ready to base themselves in Mauritius on a Premium Visa." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean:   { DEFAULT: '#0077B6', light: '#00B4D8', dark: '#005F8A' },
+            sand:    { DEFAULT: '#C9A96E', light: '#F4E4C1', lighter: '#FDF6EC' },
+            jungle:  { DEFAULT: '#2D6A4F', light: '#40916C', lighter: '#D8F3DC' },
+            coral:   { DEFAULT: '#E76F51' },
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-lg">S</span>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-xl text-ocean-dark">Safeer</span>
+            <span class="font-heading font-bold text-xl text-sand"> Mauritius</span>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"          class="nav-link">Home</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="index.html#packages" class="nav-link">Packages</a>
+          <a href="index.html#about"    class="nav-link">About</a>
+          <a href="index.html#faq"      class="nav-link">FAQ</a>
+          <a href="index.html#contact"  class="btn-primary text-sm px-5 py-2.5">Get in Touch</a>
+        </nav>
+        <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="index.html"          class="mobile-nav-link">Home</a>
+      <a href="index.html#services" class="mobile-nav-link">Services</a>
+      <a href="index.html#packages" class="mobile-nav-link">Packages</a>
+      <a href="index.html#about"    class="mobile-nav-link">About</a>
+      <a href="index.html#faq"      class="mobile-nav-link">FAQ</a>
+      <a href="index.html#contact"  class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===================== BREADCRUMB ===================== -->
+  <div class="pt-20 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-2 text-sm text-gray-500">
+      <a href="index.html" class="hover:text-ocean transition-colors">Home</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <a href="index.html#services" class="hover:text-ocean transition-colors">Services</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-ocean font-medium">Remote Worker Package</span>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=85&fit=crop"
+        alt="Laptop and coffee - remote work"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#005F8A]/92 via-[#0077B6]/65 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="900">
+        <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-white/30">
+          Remote Worker Package
+        </span>
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Work From Paradise —<br/>
+          <span class="text-sand-light">Legally</span>
+        </h1>
+        <p class="text-lg text-white/85 leading-relaxed mb-8 max-w-xl">
+          Mauritius's Premium Visa was made for remote workers like you. We handle the application, housing, tax setup, and everything in between — so you can focus on work and enjoy the island.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html#contact" class="btn-primary text-base px-8 py-4 inline-flex items-center gap-2">
+            Get a Free Consultation
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="index.html#services" class="btn-outline-white text-base px-8 py-4">
+            ← Back to all services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PREMIUM VISA DETAILS ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">The Visa</span>
+        <h2 class="section-title mt-3">Premium Visa — Full Details</h2>
+        <p class="section-subtitle">Everything you need to know about the visa designed specifically for remote workers and retirees.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div data-aos="fade-right">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <h3 class="font-heading text-xl font-semibold text-gray-900 mb-6">Eligibility Criteria</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-ocean/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Income Requirement</h4>
+                  <p class="text-gray-600 text-sm mt-0.5">Minimum USD 1,500 per month (or equivalent) from foreign sources. Can be salary, freelance income, pension, or investment income.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-ocean/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Employment Type</h4>
+                  <p class="text-gray-600 text-sm mt-0.5">Remote employees, freelancers, digital nomads, consultants, and retirees. You must work for clients or employers outside Mauritius.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-ocean/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Clean Record</h4>
+                  <p class="text-gray-600 text-sm mt-0.5">A valid passport and clean police record from your home country. No prior immigration violations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
+              <div class="font-heading text-3xl font-bold text-ocean mb-1">1 Year</div>
+              <div class="text-gray-600 text-sm">Initial duration</div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
+              <div class="font-heading text-3xl font-bold text-jungle mb-1">Renewable</div>
+              <div class="text-gray-600 text-sm">Annually, indefinitely</div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
+              <div class="font-heading text-3xl font-bold text-sand mb-1">2–4 wks</div>
+              <div class="text-gray-600 text-sm">Processing time</div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
+              <div class="font-heading text-3xl font-bold text-coral mb-1">+Dependants</div>
+              <div class="text-gray-600 text-sm">Spouse &amp; children included</div>
+            </div>
+          </div>
+          <div class="bg-ocean/5 border border-ocean/20 rounded-2xl p-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Key Benefits</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>No Mauritian work permit required</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Full legal right to reside in Mauritius</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Access to public healthcare &amp; services</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Open a local bank account</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Children can attend local schools</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Path to tax residency after 183 days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CO-WORKING SPACES ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Where to Work</span>
+        <h2 class="section-title mt-3">Best Co-Working Spaces in Mauritius</h2>
+        <p class="section-subtitle">Fast internet, great coffee, and a community of like-minded professionals — Mauritius's co-working scene is growing fast.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="bg-sand-lighter rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="0">
+          <div class="h-40 bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">WorkHive</h3>
+              <span class="bg-ocean/10 text-ocean text-xs font-semibold px-3 py-1 rounded-full">Grand Baie</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">The most popular co-working space in the north, set in a modern villa with pool access. Strong community events, reliable fibre internet, and flexible membership options from daily passes to monthly desk rentals.</p>
+            <ul class="space-y-1.5 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>100 Mbps fibre internet</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Dedicated desks &amp; hot desks</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Meeting rooms &amp; phone booths</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>From MUR 500/day</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-sand-lighter rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-40 bg-gradient-to-br from-jungle to-jungle-light flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2M12 3v1m0 0v.5"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">Co.Lab Mauritius</h3>
+              <span class="bg-jungle/10 text-jungle text-xs font-semibold px-3 py-1 rounded-full">Ebène</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Located in Ebène Cybercity, Mauritius's technology and finance hub. Ideal for entrepreneurs, fintech professionals, and those who need proximity to corporate Port Louis. Professional environment with all amenities.</p>
+            <ul class="space-y-1.5 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Cybercity location</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Private offices available</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Business address services</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>From MUR 6,500/month</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-sand-lighter rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-40 bg-gradient-to-br from-sand to-coral flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-heading text-xl font-semibold text-gray-900">The Beach Office</h3>
+              <span class="bg-coral/10 text-coral text-xs font-semibold px-3 py-1 rounded-full">Flic en Flac</span>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">A relaxed beach-town co-working space perfect for lifestyle-focused remote workers. Walk to the beach at lunch, surf before work, and connect with a community of nomads and creatives.</p>
+            <ul class="space-y-1.5 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><span class="check-dot bg-coral"></span>200m from the beach</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-coral"></span>Relaxed creative atmosphere</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-coral"></span>Community events &amp; networking</li>
+              <li class="flex items-center gap-2"><span class="check-dot bg-coral"></span>From MUR 450/day</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TAX FOR REMOTE WORKERS ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Tax Advantages</span>
+        <h2 class="section-title mt-3">Tax Benefits for Remote Workers</h2>
+        <p class="section-subtitle">As a Mauritius tax resident, your globally earned income benefits from one of the world's most attractive regimes.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+          <div class="font-heading text-4xl font-bold text-ocean mb-4">15%</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-3">Flat Personal Income Tax</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Once you achieve tax residency (183+ days/year in Mauritius), your worldwide income is subject to a flat 15% tax — no progressive brackets, no surprises.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+          <div class="font-heading text-4xl font-bold text-jungle mb-4">0%</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-3">Capital Gains &amp; Dividends</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">No capital gains tax and no withholding tax on dividends. If you hold investments, ETFs, or crypto, Mauritius is one of the most efficient places to manage them legally.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+          <div class="font-heading text-4xl font-bold text-sand mb-4">45+</div>
+          <h3 class="font-heading text-lg font-semibold text-gray-900 mb-3">Double Tax Treaties</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Mauritius has treaties with 45+ countries including most of Europe, India, and the Middle East — protecting you from being taxed twice on the same income.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-10 bg-white rounded-2xl p-8 shadow-sm" data-aos="fade-up">
+        <div class="flex items-start gap-4">
+          <svg class="w-6 h-6 text-ocean flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2">Important: Tax Residency vs. Domicile</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Tax residency in Mauritius requires 183+ days present in the country per tax year. You must also consider your tax obligations in your home country — particularly for those from jurisdictions with exit taxes or worldwide income taxation rules. We connect you with qualified tax advisors who specialise in cross-border situations for remote workers. Tax planning should be done before you move, not after.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FULL PACKAGE ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">What You Get</span>
+        <h2 class="section-title mt-3">The Complete Remote Worker Package</h2>
+        <p class="section-subtitle">Everything handled from start to finish — so you can be working from paradise within weeks.</p>
+      </div>
+
+      <div class="bg-sand-lighter rounded-2xl p-8 lg:p-12" data-aos="fade-up">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-ocean text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">1</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Premium Visa Application</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">Full document preparation, submission, and follow-up with Passport and Immigration Office.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-ocean text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">2</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Housing Search</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">Curated apartment or villa search based on your area preference, budget, and lifestyle — with viewings arranged remotely if needed.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-ocean-light text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">3</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Bank Account Setup</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">Introduction to the right bank, document preparation, and accompanied appointment for a smooth account opening experience.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-ocean-light text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">4</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Tax Residency Guidance</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">Introduction to a qualified tax advisor for cross-border planning and Mauritius tax filing requirements.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sand text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">5</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Co-Working Space Setup</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">Introduction to the best co-working spaces in your chosen area, including trial days and membership guidance.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sand text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">6</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">SIM Card &amp; Internet</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">Best local SIM options (Emtel, MyT, Chilli), fibre internet providers, and setup coordination for your home or rental.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-jungle text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">7</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">Airport Welcome &amp; Orientation</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">A Safeer representative meets you at the airport and gives you a local orientation tour on arrival day.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-jungle text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">8</div>
+            <div>
+              <h4 class="font-semibold text-gray-900 text-sm mb-1">30-Day Aftercare Support</h4>
+              <p class="text-gray-600 text-xs leading-relaxed">A dedicated point of contact for your first month — available for any questions as you settle into island life.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p class="text-gray-500 text-sm mb-1">Complete package starting from</p>
+            <div class="flex items-baseline gap-2">
+              <span class="font-heading text-5xl font-bold text-ocean">€1,500</span>
+              <span class="text-gray-500 text-sm">incl. all coordination</span>
+            </div>
+            <p class="text-gray-500 text-xs mt-2">Government visa fees and third-party costs are additional. Package price is fixed per individual (additional family members quoted separately).</p>
+          </div>
+          <a href="index.html#contact" class="btn-primary text-base px-10 py-4 inline-flex items-center gap-2 flex-shrink-0">
+            Get Started Today
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="py-20 bg-ocean-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-6">Ready to Make the Move?</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Book a free 30-minute consultation. We'll confirm your eligibility, answer all your questions, and outline exactly what happens next.</p>
+      <a href="index.html#contact" class="btn-primary text-base px-10 py-4 inline-flex items-center gap-2">
+        Get a Free Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+              <span class="text-white font-heading font-bold text-lg">S</span>
+            </div>
+            <span class="font-heading text-xl font-bold">Safeer Mauritius</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">Your trusted partner for relocation to Mauritius. We handle the complexity so you can enjoy the journey.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://wa.me/2305700000" class="social-icon" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html"          class="footer-link">Home</a></li>
+            <li><a href="index.html#services" class="footer-link">Services</a></li>
+            <li><a href="index.html#packages" class="footer-link">Packages</a></li>
+            <li><a href="index.html#about"    class="footer-link">About Us</a></li>
+            <li><a href="index.html#faq"      class="footer-link">FAQ</a></li>
+            <li><a href="index.html#contact"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="visa-residency.html"   class="footer-link">Visa &amp; Residency</a></li>
+            <li><a href="housing.html"          class="footer-link">Housing &amp; Settling In</a></li>
+            <li><a href="logistics.html"        class="footer-link">Logistics &amp; Moving</a></li>
+            <li><a href="legal-financial.html"  class="footer-link">Legal &amp; Financial</a></li>
+            <li><a href="family-lifestyle.html" class="footer-link">Family &amp; Lifestyle</a></li>
+            <li><a href="remote-worker.html"    class="footer-link">Remote Worker Package</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">© 2025 Safeer Mauritius. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">Based in Port Louis, Republic of Mauritius 🇲🇺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOATING BUTTON ===================== -->
+  <a href="https://wa.me/2305700000?text=Hello%2C%20I%27m%20interested%20in%20relocating%20to%20Mauritius.%20Can%20you%20help%3F" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

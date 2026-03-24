@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal &amp; Financial — Safeer Mauritius</title>
+  <meta name="description" content="Structure your financial and legal affairs correctly in Mauritius. Company formation, tax advisory, banking setup, and expert partner referrals." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean:   { DEFAULT: '#0077B6', light: '#00B4D8', dark: '#005F8A' },
+            sand:    { DEFAULT: '#C9A96E', light: '#F4E4C1', lighter: '#FDF6EC' },
+            jungle:  { DEFAULT: '#2D6A4F', light: '#40916C', lighter: '#D8F3DC' },
+            coral:   { DEFAULT: '#E76F51' },
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-lg">S</span>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-xl text-ocean-dark">Safeer</span>
+            <span class="font-heading font-bold text-xl text-sand"> Mauritius</span>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"          class="nav-link">Home</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="index.html#packages" class="nav-link">Packages</a>
+          <a href="index.html#about"    class="nav-link">About</a>
+          <a href="index.html#faq"      class="nav-link">FAQ</a>
+          <a href="index.html#contact"  class="btn-primary text-sm px-5 py-2.5">Get in Touch</a>
+        </nav>
+        <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="index.html"          class="mobile-nav-link">Home</a>
+      <a href="index.html#services" class="mobile-nav-link">Services</a>
+      <a href="index.html#packages" class="mobile-nav-link">Packages</a>
+      <a href="index.html#about"    class="mobile-nav-link">About</a>
+      <a href="index.html#faq"      class="mobile-nav-link">FAQ</a>
+      <a href="index.html#contact"  class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===================== BREADCRUMB ===================== -->
+  <div class="pt-20 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-2 text-sm text-gray-500">
+      <a href="index.html" class="hover:text-ocean transition-colors">Home</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <a href="index.html#services" class="hover:text-ocean transition-colors">Services</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-ocean font-medium">Legal &amp; Financial</span>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=85&fit=crop"
+        alt="Legal and business documents"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1a3a1a]/90 via-[#2D6A4F]/65 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="900">
+        <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-white/30">
+          Legal &amp; Financial Services
+        </span>
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Structure Your Affairs<br/>
+          <span class="text-sand-light">for Success in Mauritius</span>
+        </h1>
+        <p class="text-lg text-white/85 leading-relaxed mb-8 max-w-xl">
+          Getting your legal and financial foundation right from day one saves money, protects your assets, and opens the door to Mauritius's exceptional tax advantages.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html#contact" class="btn-primary text-base px-8 py-4 inline-flex items-center gap-2">
+            Get a Free Consultation
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="index.html#services" class="btn-outline-white text-base px-8 py-4">
+            ← Back to all services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPANY FORMATION ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Business Setup</span>
+        <h2 class="section-title mt-3">Company Formation Types</h2>
+        <p class="section-subtitle">Mauritius offers multiple corporate structures. We help you choose the right one for your activities and tax objectives.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 rounded-xl bg-ocean/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-semibold text-gray-900 mb-2">Domestic Company</h3>
+          <p class="text-sm text-ocean font-medium mb-3">For local operations</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">A private limited company conducting business primarily within Mauritius. Ideal for retail, hospitality, professional services, and locally-focused ventures.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>15% flat corporate tax rate</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>No minimum capital requirement</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Incorporated in 5–10 business days</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>One resident director required</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm border-2 border-jungle hover:shadow-md transition-shadow relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-jungle text-white text-xs font-bold px-4 py-1 rounded-full">Most Popular</div>
+          <div class="w-12 h-12 rounded-xl bg-jungle/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-jungle" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-semibold text-gray-900 mb-2">Global Business Licence (GBL)</h3>
+          <p class="text-sm text-jungle font-medium mb-3">For international operations</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">The preferred structure for businesses with international clients, investment activities, or holding companies. Qualifies for Mauritius's full network of double tax treaties.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>15% corporate tax (may be reduced by treaties)</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Access to 45+ double tax treaties</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>No withholding tax on dividends</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>FSC licence required</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-sand/20 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="font-heading text-xl font-semibold text-gray-900 mb-2">Authorised Company</h3>
+          <p class="text-sm text-sand font-medium mb-3">For non-resident businesses</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">A lighter-touch structure for businesses that are managed and controlled outside Mauritius but wish to use the island as a base. Simple compliance requirements.</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Exempt from Mauritius income tax</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>No treaty access</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Minimal local compliance</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Quick and low-cost to set up</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TAX BENEFITS ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Tax Efficiency</span>
+        <h2 class="section-title mt-3">Mauritius Tax Benefits</h2>
+        <p class="section-subtitle">One of Africa's most attractive tax regimes for individuals and businesses alike.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="0">
+          <div class="font-heading text-5xl font-bold text-ocean mb-3">15%</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Flat Income Tax</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A single flat rate for both personal and corporate income. No progressive brackets, no surprises.</p>
+        </div>
+        <div class="text-center bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="font-heading text-5xl font-bold text-jungle mb-3">0%</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Capital Gains Tax</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">No tax on gains from the disposal of shares, property, or other capital assets. Ideal for investors.</p>
+        </div>
+        <div class="text-center bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="font-heading text-5xl font-bold text-sand mb-3">0%</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Inheritance Tax</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">No estate duty or inheritance tax. Wealth can pass to heirs without additional tax burden.</p>
+        </div>
+        <div class="text-center bg-sand-lighter rounded-2xl p-8" data-aos="fade-up" data-aos-delay="300">
+          <div class="font-heading text-5xl font-bold text-coral mb-3">45+</div>
+          <h3 class="font-semibold text-gray-900 mb-2">Tax Treaties</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Mauritius has double tax avoidance agreements with over 45 countries, covering most major economies.</p>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-ocean/5 border border-ocean/20 rounded-2xl p-8" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-ocean flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div><strong>Tax Residency:</strong> Achieved by spending 183+ days per year in Mauritius, or 270 days over 3 years.</div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-ocean flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div><strong>No Withholding Tax:</strong> Dividends, interest, and royalties paid to non-residents are generally exempt from withholding tax.</div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-ocean flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div><strong>Territorial Tax:</strong> Only Mauritius-sourced income is subject to tax for non-domiciled residents in certain structures.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BANKING ===================== -->
+  <section class="py-24 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Banking in Mauritius</span>
+        <h2 class="section-title mt-3">Setting Up Your Bank Account</h2>
+        <p class="section-subtitle">Mauritius has a well-regulated, internationally connected banking sector. We guide you through account opening from abroad.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-ocean text-white flex items-center justify-center font-bold text-sm">MCB</div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900">Mauritius Commercial Bank</h3>
+              <p class="text-xs text-gray-500">Largest &amp; most established</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">The largest bank in Mauritius with the most extensive branch and ATM network. Excellent for personal and business banking with strong online services.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Multi-currency accounts</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Online banking in English/French</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Investment &amp; wealth services</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-jungle text-white flex items-center justify-center font-bold text-sm">SBM</div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900">State Bank of Mauritius</h3>
+              <p class="text-xs text-gray-500">Government-owned, reliable</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">The government-owned bank with an expanding regional presence. Strong for everyday banking and competitive deposit rates.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Good for fixed deposits</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Strong local &amp; regional network</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-jungle"></span>Business banking solutions</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-sand text-white flex items-center justify-center font-bold text-sm">AA</div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900">AfrAsia Bank</h3>
+              <p class="text-xs text-gray-500">International &amp; HNW focused</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">A boutique international bank preferred by HNW individuals, expats, and international businesses. Known for private banking quality and multi-currency expertise.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Premium private banking</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>Multi-currency accounts</li>
+            <li class="flex items-center gap-2"><span class="check-dot bg-sand"></span>International transfers &amp; FX</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-sm" data-aos="fade-up">
+        <h3 class="font-heading text-xl font-semibold text-gray-900 mb-6">Typical Account Opening Requirements</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-600">
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Valid passport</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Proof of address (home country)</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Mauritius residence permit or visa</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Source of funds declaration</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>3–6 months bank statements</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Reference letter (for premium accounts)</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Proof of employment or business</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>Initial deposit (varies by bank)</div>
+          <div class="flex items-center gap-2"><span class="check-dot bg-ocean"></span>In-person visit (usually required)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR LEGAL PARTNERS ===================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">Our Network</span>
+        <h2 class="section-title mt-3">Legal Partners &amp; Our Process</h2>
+        <p class="section-subtitle">We work exclusively with Mauritius's top law firms, tax advisors, and financial consultants.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div class="space-y-6">
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-full bg-jungle text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+              <div>
+                <h3 class="font-heading text-lg font-semibold text-gray-900 mb-1">Initial Needs Assessment</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We assess your situation — business activities, income sources, family structure, and long-term goals — to map out the optimal legal and financial structure.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-full bg-jungle-light text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+              <div>
+                <h3 class="font-heading text-lg font-semibold text-gray-900 mb-1">Partner Introduction</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We introduce you to the right qualified professionals — a licensed attorney for legal work, a licensed tax advisor for planning, and a bank relationship manager for accounts.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-full bg-ocean text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+              <div>
+                <h3 class="font-heading text-lg font-semibold text-gray-900 mb-1">Company Incorporation</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">If required, we oversee the incorporation process with the Registrar of Companies and Financial Services Commission (FSC) — typically 5–15 business days.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-5">
+              <div class="w-12 h-12 rounded-full bg-sand text-white flex items-center justify-center font-bold flex-shrink-0">4</div>
+              <div>
+                <h3 class="font-heading text-lg font-semibold text-gray-900 mb-1">Banking &amp; Compliance Setup</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We accompany you through bank account opening, AML/KYC processes, and ensure your compliance obligations are clearly understood from the start.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <div class="bg-jungle/5 border border-jungle/20 rounded-2xl p-8">
+            <h3 class="font-heading text-xl font-semibold text-gray-900 mb-6">Why Get This Right from Day One?</h3>
+            <div class="space-y-4 text-sm text-gray-700">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-jungle flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <p>Restructuring an incorrectly set-up company after the fact is costly, time-consuming, and may trigger tax events.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-jungle flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <p>Using the wrong company type means you may miss out on treaty benefits or face unexpected withholding taxes on distributions.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-jungle flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <p>Mauritius's tax authority (MRA) increasingly scrutinises substance requirements — getting proper advice upfront ensures genuine compliance.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-jungle flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <p>The right structure protects you, your family, and your assets — from liability, currency risk, and cross-border tax exposure.</p>
+              </div>
+            </div>
+            <a href="index.html#contact" class="mt-8 btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm">
+              Speak to a Specialist
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="py-20 bg-ocean-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-6">Get Your Structure Right</h2>
+      <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Book a free consultation to discuss your business and financial goals. We'll outline the best structure and introduce the right advisors for your situation.</p>
+      <a href="index.html#contact" class="btn-primary text-base px-10 py-4 inline-flex items-center gap-2">
+        Get a Free Consultation
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+              <span class="text-white font-heading font-bold text-lg">S</span>
+            </div>
+            <span class="font-heading text-xl font-bold">Safeer Mauritius</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-sm">Your trusted partner for relocation to Mauritius. We handle the complexity so you can enjoy the journey.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://wa.me/2305700000" class="social-icon" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html"          class="footer-link">Home</a></li>
+            <li><a href="index.html#services" class="footer-link">Services</a></li>
+            <li><a href="index.html#packages" class="footer-link">Packages</a></li>
+            <li><a href="index.html#about"    class="footer-link">About Us</a></li>
+            <li><a href="index.html#faq"      class="footer-link">FAQ</a></li>
+            <li><a href="index.html#contact"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="visa-residency.html"   class="footer-link">Visa &amp; Residency</a></li>
+            <li><a href="housing.html"          class="footer-link">Housing &amp; Settling In</a></li>
+            <li><a href="logistics.html"        class="footer-link">Logistics &amp; Moving</a></li>
+            <li><a href="legal-financial.html"  class="footer-link">Legal &amp; Financial</a></li>
+            <li><a href="family-lifestyle.html" class="footer-link">Family &amp; Lifestyle</a></li>
+            <li><a href="remote-worker.html"    class="footer-link">Remote Worker Package</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">© 2025 Safeer Mauritius. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">Based in Port Louis, Republic of Mauritius 🇲🇺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOATING BUTTON ===================== -->
+  <a href="https://wa.me/2305700000?text=Hello%2C%20I%27m%20interested%20in%20relocating%20to%20Mauritius.%20Can%20you%20help%3F" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
