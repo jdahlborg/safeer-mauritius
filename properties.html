@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties for Sale & Rent — Safeer Mauritius</title>
+  <meta name="description" content="Browse properties for sale and rent in Mauritius. Villas, apartments, and estates across Grand Baie, Tamarin, Flic en Flac, and more." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean:  { DEFAULT: '#0077B6', light: '#00B4D8', dark: '#005F8A' },
+            sand:   { DEFAULT: '#C9A96E', light: '#F4E4C1', lighter: '#FDF6EC' },
+            jungle: { DEFAULT: '#2D6A4F', light: '#40916C', lighter: '#D8F3DC' },
+            coral:  { DEFAULT: '#E76F51' },
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .prop-tab { cursor: pointer; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
+    .prop-tab.active { background: #0077B6; color: #fff; }
+    .prop-tab:not(.active) { background: #f3f4f6; color: #6b7280; }
+    .prop-tab:not(.active):hover { background: #e5e7eb; color: #374151; }
+    .prop-card { display: none; }
+    .prop-card.visible { display: block; }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white antialiased">
+
+  <!-- HEADER -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center">
+            <span class="text-white font-heading font-bold text-lg">S</span>
+          </div>
+          <div>
+            <span class="font-heading font-bold text-xl text-ocean-dark">Safeer</span>
+            <span class="font-heading font-bold text-xl text-sand"> Mauritius</span>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"           class="nav-link">Home</a>
+          <a href="index.html#services"  class="nav-link">Services</a>
+          <a href="properties.html"      class="nav-link" style="color:#0077B6">Properties</a>
+          <a href="index.html#packages"  class="nav-link">Packages</a>
+          <a href="index.html#about"     class="nav-link">About</a>
+          <a href="index.html#contact"   class="btn-primary text-sm px-5 py-2.5">Get in Touch</a>
+        </nav>
+        <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="index.html"           class="mobile-nav-link">Home</a>
+      <a href="index.html#services"  class="mobile-nav-link">Services</a>
+      <a href="properties.html"      class="mobile-nav-link">Properties</a>
+      <a href="index.html#packages"  class="mobile-nav-link">Packages</a>
+      <a href="index.html#about"     class="mobile-nav-link">About</a>
+      <a href="index.html#contact"   class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative h-80 flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=85&fit=crop" alt="Mauritius property" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ocean-dark/90 via-ocean/65 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 w-full">
+      <nav class="text-white/60 text-sm mb-5 flex items-center gap-2">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <span>›</span>
+        <span class="text-white">Properties</span>
+      </nav>
+      <h1 class="font-heading text-4xl lg:text-5xl font-bold text-white mb-3">Properties in Mauritius</h1>
+      <p class="text-white/80 text-lg max-w-xl">For sale and for rent — curated by our partner agents across the island</p>
+    </div>
+  </section>
+
+  <!-- TABS + FILTERS -->
+  <section class="bg-sand-lighter py-6 sticky top-20 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center gap-4">
+      <div class="flex gap-2">
+        <button class="prop-tab active" data-tab="all">All</button>
+        <button class="prop-tab" data-tab="sale">For Sale</button>
+        <button class="prop-tab" data-tab="rent">For Rent</button>
+      </div>
+      <div class="flex flex-wrap gap-2 ml-auto">
+        <select id="filter-area" class="text-sm border border-gray-200 rounded-full px-4 py-2 bg-white text-gray-700 outline-none focus:border-ocean">
+          <option value="">All Areas</option>
+          <option>Grand Baie</option>
+          <option>Tamarin</option>
+          <option>Flic en Flac</option>
+          <option>Bel Ombre</option>
+          <option>Pereybere</option>
+          <option>Port Louis</option>
+        </select>
+        <select id="filter-type" class="text-sm border border-gray-200 rounded-full px-4 py-2 bg-white text-gray-700 outline-none focus:border-ocean">
+          <option value="">All Types</option>
+          <option>Villa</option>
+          <option>Apartment</option>
+          <option>Penthouse</option>
+          <option>Estate</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTIES GRID -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- FOR SALE -->
+        <div class="prop-card visible" data-type="sale" data-area="Grand Baie" data-category="Villa" data-aos="fade-up">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80&fit=crop" alt="Villa Grand Baie" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-ocean text-white text-xs font-bold px-3 py-1 rounded-full">For Sale</span>
+              <span class="absolute top-3 right-3 bg-white/90 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">PDS</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Grand Baie · Villa</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Luxury Sea-View Villa</h3>
+              <p class="text-ocean font-bold text-xl mb-3">€850,000</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 4</span><span>🚿 3</span><span>📐 320 m²</span><span>🏊 Pool</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Gated PDS development, sea views, private pool. Qualifies for Permanent Residence Permit. Partner: JLL Mauritius.</p>
+              <a href="index.html#contact" class="btn-outline w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card visible" data-type="sale" data-area="Tamarin" data-category="Estate" data-aos="fade-up" data-aos-delay="50">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&fit=crop" alt="Golf Estate Tamarin" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-ocean text-white text-xs font-bold px-3 py-1 rounded-full">For Sale</span>
+              <span class="absolute top-3 right-3 bg-sand text-white text-xs font-bold px-3 py-1 rounded-full">IRS</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Tamarin · Estate Villa</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Golf Estate Villa</h3>
+              <p class="text-ocean font-bold text-xl mb-3">€1,200,000</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 5</span><span>🚿 4</span><span>📐 480 m²</span><span>🏊 Pool</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">IRS villa on prestigious golf course. Beach club access, concierge, private garden. Partner: ENL Property.</p>
+              <a href="index.html#contact" class="btn-outline w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card visible" data-type="sale" data-area="Bel Ombre" data-category="Villa" data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&fit=crop" alt="Villa Bel Ombre" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-ocean text-white text-xs font-bold px-3 py-1 rounded-full">For Sale</span>
+              <span class="absolute top-3 right-3 bg-white/90 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">PDS</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Bel Ombre · Villa</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Beachfront Villa — South Coast</h3>
+              <p class="text-ocean font-bold text-xl mb-3">€2,100,000</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 6</span><span>🚿 5</span><span>📐 620 m²</span><span>🏊 Pool</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Exceptional beachfront estate on Mauritius's most private southern coast. Direct lagoon access. Partner: Bel Ombre Properties.</p>
+              <a href="index.html#contact" class="btn-outline w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card visible" data-type="sale" data-area="Grand Baie" data-category="Penthouse" data-aos="fade-up" data-aos-delay="0">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&fit=crop" alt="Penthouse Grand Baie" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-ocean text-white text-xs font-bold px-3 py-1 rounded-full">For Sale</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Grand Baie · Penthouse</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Rooftop Penthouse</h3>
+              <p class="text-ocean font-bold text-xl mb-3">€480,000</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 3</span><span>🚿 2</span><span>📐 190 m²</span><span>🌅 Rooftop</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Stunning panoramic ocean views from this top-floor penthouse in Grand Baie's most sought-after address. Partner: JLL Mauritius.</p>
+              <a href="index.html#contact" class="btn-outline w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOR RENT -->
+        <div class="prop-card visible" data-type="rent" data-area="Flic en Flac" data-category="Apartment" data-aos="fade-up" data-aos-delay="0">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&fit=crop" alt="Apartment Flic en Flac" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-jungle text-white text-xs font-bold px-3 py-1 rounded-full">For Rent</span>
+              <span class="absolute top-3 right-3 bg-white/90 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Furnished</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Flic en Flac · Apartment</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Modern Beach Apartment</h3>
+              <p class="text-jungle font-bold text-xl mb-3">€1,200 / month</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 2</span><span>🚿 2</span><span>📐 110 m²</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Fully furnished, 200m from beach. Air conditioning, fast fibre, parking. Ideal for remote workers. Partner: Alize Coastal & More.</p>
+              <a href="index.html#contact" class="btn-outline-green w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card visible" data-type="rent" data-area="Grand Baie" data-category="Villa" data-aos="fade-up" data-aos-delay="50">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=600&q=80&fit=crop" alt="Villa rental Grand Baie" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-jungle text-white text-xs font-bold px-3 py-1 rounded-full">For Rent</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Grand Baie · Villa</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Villa with Pool — Grand Baie</h3>
+              <p class="text-jungle font-bold text-xl mb-3">€3,500 / month</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 4</span><span>🚿 3</span><span>📐 280 m²</span><span>🏊 Pool</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Spacious family villa in quiet residential area. Large garden, private pool, double garage. 10 min walk to shops and beach. Partner: JLL Mauritius.</p>
+              <a href="index.html#contact" class="btn-outline-green w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card visible" data-type="rent" data-area="Tamarin" data-category="Villa" data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&fit=crop" alt="Villa Tamarin" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-jungle text-white text-xs font-bold px-3 py-1 rounded-full">For Rent</span>
+              <span class="absolute top-3 right-3 bg-white/90 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Furnished</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Tamarin · Villa</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Surf Villa — Black River</h3>
+              <p class="text-jungle font-bold text-xl mb-3">€2,200 / month</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 3</span><span>🚿 2</span><span>📐 180 m²</span><span>🏄 Beach nearby</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Charming furnished villa minutes from Tamarin's surf beach. Tropical garden, outdoor dining terrace. Popular with remote workers & families. Partner: Alize Coastal & More.</p>
+              <a href="index.html#contact" class="btn-outline-green w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card visible" data-type="rent" data-area="Port Louis" data-category="Apartment" data-aos="fade-up" data-aos-delay="0">
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop" alt="Apartment Port Louis" class="w-full h-52 object-cover" />
+              <span class="absolute top-3 left-3 bg-jungle text-white text-xs font-bold px-3 py-1 rounded-full">For Rent</span>
+            </div>
+            <div class="p-5">
+              <div class="text-xs text-gray-400 mb-1">Port Louis / Ebène · Apartment</div>
+              <h3 class="font-heading text-lg font-semibold text-gray-900 mb-2">Executive Apartment — Ebène</h3>
+              <p class="text-jungle font-bold text-xl mb-3">€900 / month</p>
+              <div class="flex gap-4 text-sm text-gray-400 mb-4">
+                <span>🛏 1</span><span>🚿 1</span><span>📐 65 m²</span><span>🏢 City</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-4 leading-relaxed">Smart, well-appointed apartment in Ebène Cybercity. Ideal for professionals. Gym, co-working lounge, 24h security. Partner: ENL Property.</p>
+              <a href="index.html#contact" class="btn-outline-green w-full text-center block py-2.5 rounded-xl text-sm">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="text-center text-gray-400 text-sm mt-12">
+        Don't see what you're looking for? <a href="index.html#contact" class="text-ocean hover:underline">Tell us your requirements</a> — we search our full partner network for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- PARTNER DEVELOPERS & AGENTS -->
+  <section class="py-20 bg-sand-lighter">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-tag">Our Network</span>
+        <h2 class="section-title mt-3">Partner Agents & Developers</h2>
+        <p class="section-subtitle">Every property we present is sourced through licensed, vetted professionals we personally trust</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-16 h-16 rounded-full bg-ocean/10 flex items-center justify-center mx-auto mb-4">
+            <span class="font-heading font-bold text-ocean text-xl">JLL</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-1">JLL Mauritius</h4>
+          <p class="text-gray-500 text-xs mb-2 leading-relaxed">Global real estate leader with a dedicated Mauritius desk for luxury residential and commercial.</p>
+          <div class="text-xs text-gray-400">Grand Baie · Pereybere · Port Louis</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-full bg-jungle/10 flex items-center justify-center mx-auto mb-4">
+            <span class="font-heading font-bold text-jungle text-xl">ENL</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-1">ENL Property</h4>
+          <p class="text-gray-500 text-xs mb-2 leading-relaxed">Mauritius's largest property developer. IRS, PDS & RES-approved schemes with integrated resort amenities.</p>
+          <div class="text-xs text-gray-400">Beau Plan · Moka · Tamarin</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-full bg-sand/20 flex items-center justify-center mx-auto mb-4">
+            <span class="font-heading font-bold text-sand text-xl">ACM</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-1">Alize Coastal & More</h4>
+          <p class="text-gray-500 text-xs mb-2 leading-relaxed">Specialists in long-term expat rentals. Fully managed properties and furnished options island-wide.</p>
+          <div class="text-xs text-gray-400">Flic en Flac · Tamarin · Grand Baie</div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-coral/10 flex items-center justify-center mx-auto mb-4">
+            <span class="font-heading font-bold text-coral text-xl">BLP</span>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-1">Bel Ombre Properties</h4>
+          <p class="text-gray-500 text-xs mb-2 leading-relaxed">Exclusive boutique agency for high-end estates and villas on Mauritius's prestigious south coast.</p>
+          <div class="text-xs text-gray-400">Bel Ombre · Le Morne · Baie du Cap</div>
+        </div>
+      </div>
+
+      <div class="bg-ocean rounded-2xl p-8 text-white text-center" data-aos="fade-up">
+        <h3 class="font-heading text-2xl font-bold mb-3">Are You a Property Agent or Developer?</h3>
+        <p class="text-white/75 mb-6 max-w-xl mx-auto">Join our partner network and get your listings in front of qualified, serious international buyers and tenants — already planning their move to Mauritius.</p>
+        <a href="index.html#contact" class="inline-block bg-white text-ocean font-semibold px-8 py-3 rounded-xl hover:bg-sand-light transition-colors">Join Our Network</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PDS / IRS EXPLAINER -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-tag">Buying in Mauritius</span>
+        <h2 class="section-title mt-3">Property Ownership Schemes</h2>
+        <p class="section-subtitle">Foreigners can legally purchase property in Mauritius through government-approved schemes</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="service-card border-t-4 border-ocean" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="font-heading text-lg font-bold text-gray-900 mb-3">PDS — Property Development Scheme</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">The most common scheme for foreigners. Mixed residential developments with shared amenities. Minimum purchase of USD 375,000 qualifies for a Permanent Residence Permit.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex gap-2"><span class="text-ocean">✓</span> Open to all foreign nationals</li>
+            <li class="flex gap-2"><span class="text-ocean">✓</span> Freehold ownership</li>
+            <li class="flex gap-2"><span class="text-ocean">✓</span> Permanent Residence at USD 375K+</li>
+          </ul>
+        </div>
+        <div class="service-card border-t-4 border-jungle" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-heading text-lg font-bold text-gray-900 mb-3">IRS — Integrated Resort Scheme</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Large luxury resort-style developments combining residential units with hotel amenities — spa, golf, beach club. Premium lifestyle with full services included.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex gap-2"><span class="text-jungle">✓</span> Resort-class amenities included</li>
+            <li class="flex gap-2"><span class="text-jungle">✓</span> Rental pool options available</li>
+            <li class="flex gap-2"><span class="text-jungle">✓</span> Full permanent residence rights</li>
+          </ul>
+        </div>
+        <div class="service-card border-t-4 border-sand" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-heading text-lg font-bold text-gray-900 mb-3">RES — Real Estate Scheme</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Smaller-scale residential developments on plots under 10 hectares. Offers more flexibility in size and location. No minimum investment threshold.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex gap-2"><span class="text-sand">✓</span> No minimum price requirement</li>
+            <li class="flex gap-2"><span class="text-sand">✓</span> Smaller, more intimate developments</li>
+            <li class="flex gap-2"><span class="text-sand">✓</span> Freehold title</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-ocean-dark text-white text-center">
+    <div class="max-w-2xl mx-auto px-4" data-aos="fade-up">
+      <h2 class="font-heading text-4xl font-bold mb-4">Find Your Perfect Property</h2>
+      <p class="text-white/75 text-lg mb-8">Tell us your budget, preferred area, and lifestyle — our team and partner agents will find you the best options on the market.</p>
+      <a href="index.html#contact" class="btn-primary px-10 py-4 text-base inline-block">Start Your Property Search</a>
+      <div class="mt-6"><a href="index.html#services" class="text-white/60 hover:text-white text-sm transition-colors">← Back to all services</a></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-ocean to-ocean-light flex items-center justify-center"><span class="text-white font-heading font-bold">S</span></div>
+            <span class="font-heading text-lg font-bold">Safeer Mauritius</span>
+          </div>
+          <p class="text-gray-400 text-sm">Your trusted partner for relocation to Mauritius.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+          <ul class="space-y-1.5">
+            <li><a href="index.html"           class="footer-link">Home</a></li>
+            <li><a href="index.html#services"  class="footer-link">Services</a></li>
+            <li><a href="properties.html"      class="footer-link">Properties</a></li>
+            <li><a href="index.html#packages"  class="footer-link">Packages</a></li>
+            <li><a href="index.html#contact"   class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-3">Services</h4>
+          <ul class="space-y-1.5">
+            <li><a href="visa-residency.html"   class="footer-link">Visa & Residency</a></li>
+            <li><a href="housing.html"          class="footer-link">Housing & Settling In</a></li>
+            <li><a href="logistics.html"        class="footer-link">Logistics & Moving</a></li>
+            <li><a href="legal-financial.html"  class="footer-link">Legal & Financial</a></li>
+            <li><a href="family-lifestyle.html" class="footer-link">Family & Lifestyle</a></li>
+            <li><a href="remote-worker.html"    class="footer-link">Remote Worker Package</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p class="text-gray-500 text-sm">© 2025 Safeer Mauritius. All rights reserved.</p>
+        <p class="text-gray-500 text-sm">Based in Port Louis, Republic of Mauritius 🇲🇺</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/2305700000?text=Hello%2C%20I%27m%20interested%20in%20properties%20in%20Mauritius.%20Can%20you%20help%3F" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Tab filter
+    const tabs = document.querySelectorAll('.prop-tab');
+    const cards = document.querySelectorAll('.prop-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const type = tab.dataset.tab;
+        cards.forEach(card => {
+          const match = type === 'all' || card.dataset.type === type;
+          card.classList.toggle('visible', match);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
